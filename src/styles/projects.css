@@ -1,5 +1,7 @@
 .projects {
-  padding-top: 60px
+  padding-top: 60px;
+   width:100%;
+  overflow-x:hidden;
 }
 
 .projects-header {

@@ -1,6 +1,8 @@
 .skills {
   position: relative;
   padding: 60px 0px 0px 0px;
+   width:100%;
+  overflow-x:hidden;
 }
 
 .skills::before {
