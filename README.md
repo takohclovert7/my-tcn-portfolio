@@ -1,4 +1,4 @@
-# Micheal Jone Portfolio Website
+# Takoh Clovert Nfua Portfolio Website
 
 ## Overview
 
@@ -47,44 +47,12 @@ The website follows a premium dark-themed design with glassmorphism effects, smo
 
 ---
 
-## Project Structure
-
-```text
-src
-│
-├── components
-│   ├── Navbar.jsx
-│   ├── Hero.jsx
-│   ├── About.jsx
-│   ├── Skills.jsx
-│   ├── Projects.jsx
-│   ├── Contact.jsx
-│   └── Footer.jsx
-│
-├── data
-│   └── projects.js
-│
-├── styles
-│   ├── navbar.css
-│   ├── hero.css
-│   ├── about.css
-│   ├── skills.css
-│   ├── projects.css
-│   ├── contact.css
-│   └── footer.css
-│
-├── App.jsx
-└── main.jsx
-```
-
----
-
 ## Installation
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/takohclovert7/my-tcn-portfolio.git
 ```
 
 Navigate into the project directory:
@@ -190,7 +158,7 @@ Allows visitors to:
 
 ## Author
 
-### Micheal Jone
+### Takoh Clovert Nfua
 
 Full Stack Developer & Mobile App Engineer
 
