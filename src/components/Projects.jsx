@@ -1,135 +1,131 @@
+
 import projects from "../data/projects";
 import "./../styles/projects.css";
 
 function Projects() {
   return (
-    <section
-      id="projects"
-      className="projects"
-    >
-
+    <section id="projects" className="projects">
       <div className="container">
-
         <div className="projects-header">
-
-          <span>MY WORK</span>
+          <span className="projects-eyebrow">A SELECTION OF MY WORK</span>
 
           <h2>
-            Featured Projects
+            Things I've <span>built.</span>
           </h2>
 
           <p>
-            A collection of applications,
-            websites and digital products
-            I have designed and developed.
+            A look at some of the applications and digital products I've
+            worked on, the problems they explore, and the work behind them.
           </p>
-
         </div>
 
-        {projects.map((project, index) => (
-                
-          <div
-            key={project.id}
-            className={`project ${
-              index % 2 !== 0
-                ? "reverse"
-                : ""
-}`}
-          >
+        <div className="projects-list">
+          {projects.map((project, index) => {
+            const isPrivateRepo = [2, 3].includes(Number(project.id));
 
-            <div className="project-image">
+            return (
+              <article
+                key={project.id}
+                className={`project-item ${
+                  index % 2 !== 0 ? "project-reverse" : ""
+                }`}
+              >
+                <div className="project-visual">
+                  <div className="project-image-frame">
+                    <div className="project-image-topbar">
+                      <span />
+                      <span />
+                      <span />
+                      <small>PROJECT PREVIEW</small>
+                    </div>
 
-              <img
-                src={project.image}
-                alt={project.title}
-              />
+                    <div className="project-image">
+                      <img
+                        src={project.image}
+                        alt={`${project.title} project preview`}
+                        loading="lazy"
+                      />
+                    </div>
 
-            </div>
-
-            <div className="project-content">
-
-              <h3>
-                {project.title}
-              </h3>
-               <div className="project-box glass">
-
-                <h4>My Role</h4>
-
-                <p>
-                  {project.role}
-                </p>
-
-              </div>
-              <div className="project-box glass">
-
-                <h4>Overview</h4>
-
-                <p>
-                  {project.overview}
-                </p>
-
-              </div>
-
-              <div className="project-box glass">
-
-                <h4>Purpose</h4>
-
-                <p>
-                  {project.purpose}
-                </p>
-
-              </div>
-
-              <div className="tech-stack">
-
-                {project.technologies.map(
-                  (tech, index) => (
-                    <span
-                      key={index}
-                    >
-                      {tech}
+                    <span className="project-index">
+                      {String(index + 1).padStart(2, "0")}
                     </span>
-                  )
-                )}
+                  </div>
+                </div>
 
-              </div>
+                <div className="project-content">
+                  <div className="project-heading">
+                    <span className="project-label">FEATURED PROJECT</span>
+                    <h3>{project.title}</h3>
+                  </div>
 
-              <div className="project-buttons">
+                  <div className="project-details">
+                    <div className="project-detail">
+                      <span className="detail-label">MY ROLE</span>
+                      <p>{project.role}</p>
+                    </div>
 
-                <a
-                  className="project-link"
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={(e) => {
-                    if ([2, 3].includes(project.id)) {
-                      e.preventDefault();
-                    }
-                  }}
-                >
-                  {[2, 3].includes(project.id)
-                    ? "Code on Private Repo"
-                    : "View Code"}
-                </a>
+                    <div className="project-detail">
+                      <span className="detail-label">THE OVERVIEW</span>
+                      <p>{project.overview}</p>
+                    </div>
 
-           <a
-                  href={project.demoDoc}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Demo Video
-                </a> 
-              
-              </div>
+                    <div className="project-detail">
+                      <span className="detail-label">THE PURPOSE</span>
+                      <p>{project.purpose}</p>
+                    </div>
+                  </div>
 
-            </div>
+                  <div className="project-tech">
+                    <span className="detail-label">BUILT WITH</span>
 
-          </div>
+                    <div className="tech-stack">
+                      {project.technologies.map((tech) => (
+                        <span key={tech}>{tech}</span>
+                      ))}
+                    </div>
+                  </div>
 
-        ))}
+                  <div className="project-buttons">
+                    {isPrivateRepo ? (
+                      <span className="project-private">
+                        <span className="private-dot" />
+                        Code on private repository
+                      </span>
+                    ) : project.github ? (
+                      <a
+                        className="project-link project-link-primary"
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View source code <span aria-hidden="true">↗</span>
+                      </a>
+                    ) : null}
 
+                    {project.demoDoc && (
+                      <a
+                        className="project-link project-link-secondary"
+                        href={project.demoDoc}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Watch demo <span aria-hidden="true">▶</span>
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+
+        <div className="projects-footer">
+          <span className="projects-footer-line" />
+          <p>More ideas, experiments and projects are always in progress.</p>
+          <span className="projects-footer-line" />
+        </div>
       </div>
-
     </section>
   );
 }

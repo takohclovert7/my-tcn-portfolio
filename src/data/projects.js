@@ -2,129 +2,120 @@
 const projects = [
   {
     id: 1,
-
     title: "Personal Portfolio Website",
 
-    role: "Full Stack Developer (Frontend & Backend)",
+    role: "Frontend Developer",
 
     overview:
-      "A premium single-page portfolio website designed and developed to showcase my skills, projects, experience, and contact information in a modern and professional way.",
+      "My personal portfolio website, built to introduce who I am as a developer and present my projects, technical skills and background in one place. It features a responsive layout and an integrated contact form.",
 
     purpose:
-      "Built to establish a strong personal brand, showcase my development capabilities, and provide potential clients and employers with an engaging overview of my work.",
+      "Created to give employers, clients and collaborators a clear picture of my work and provide an easy way to get in touch.",
 
     technologies: [
-      "React JS",
-      "CSS3",
+      "React",
       "JavaScript",
+      "CSS3",
       "Responsive Design",
-      "EmailJS"
+      "EmailJS",
     ],
 
-    github:
-      "https://github.com/takohclovert7/my-tcn-portfolio",
+    github: "https://github.com/takohclovert7/my-tcn-portfolio",
 
-    demoDoc:
-      "/",
+    demoDoc: "https://my-tcn-portfolio.vercel.app/",
+    demoLabel: "Visit live website",
 
-    image:
-      "../../portfolio-project.png"
+    image: "/portfolio-project.png",
   },
 
   {
     id: 2,
-
     title: "TalkEase",
 
-    role: "Full Stack Developer (Frontend & Backend)",
+    role: "Full-Stack Developer",
 
     overview:
-      "TalkEase is a video conferencing application that allows users to create and join virtual meetings, communicate through real-time audio and video, and collaborate from anywhere. This project was developed during my internship, where I gained practical experience building real-world communication systems and working with modern full-stack technologies.",
+      "TalkEase is a video conferencing application that allows users to create and join virtual meetings with real-time audio and video communication. The project started during my internship, where I worked on developing the application and exploring real-time communication technologies.",
 
     purpose:
-      "Built to provide a reliable platform for remote communication, online consultations, team collaboration, and virtual meetings with a smooth user experience.",
+      "The goal was to create a platform for virtual meetings, remote communication and online collaboration without requiring users to be in the same location.",
 
     technologies: [
       "React Native",
-      "WebRTC",
       "Node.js",
-      "Socket.io",
       "Express.js",
-      "MongoDB"
+      "MongoDB",
+      "Socket.IO",
+      "WebRTC",
     ],
 
-    github:
-      "#",
+    github: null,
+    repositoryStatus: "private",
 
     demoDoc:
       "https://drive.google.com/drive/folders/14meY2EywMJVcziFC0IxjF_3oI3dQiUAC",
+    demoLabel: "View project files",
 
-    image:
-      "../../talkEase.png"
+    image: "/talkEase.png",
   },
 
   {
     id: 3,
-
     title: "E-Commerce Mobile App",
 
-    role: "Full Stack Developer (Frontend & Backend)",
+    role: "Full-Stack Developer",
 
     overview:
-      "A modern mobile shopping application that enables customers to browse products, add items to their cart, place orders, and securely complete purchases from their mobile devices.",
+      "A mobile shopping application that allows customers to explore products, add items to their cart and place orders. I worked on both the mobile application and its backend services.",
 
     purpose:
-      "Built to provide businesses with a mobile-first sales platform while offering customers a fast, secure, and convenient shopping experience.",
+      "Built as a practical exploration of how mobile commerce applications work, bringing product browsing, shopping cart functionality, order management and payment integration together.",
 
     technologies: [
       "React Native",
       "Node.js",
-      "MongoDB",
       "Express.js",
-      "Flutterwave"
+      "MongoDB",
+      "Flutterwave",
     ],
 
-    github:
-      "#",
+    github: null,
+    repositoryStatus: "private",
 
     demoDoc:
       "https://drive.google.com/drive/folders/1jiMmoZwZ5GzWnuzJ7tVl4YDP1U0EQEce",
+    demoLabel: "View project files",
 
-    image:
-      "../../cluadFashion.png"
+    image: "/cluadFashion.png",
   },
 
   {
     id: 4,
-
     title: "Resilix",
 
     role: "Frontend Developer",
 
     overview:
-      "Resilix is a disaster and emergency management platform designed to help communities, emergency agents, and local authorities report, monitor, and respond to emergencies in real time. The platform integrates incident reporting, geolocation services, alerts, communication tools, and resource management into a single system. This project was developed as my Level 400 university project, where I contributed to the frontend development and user experience implementation.",
+      "Resilix is a disaster and emergency management application. It was designed to support emergency reporting, location-based information and communication between communities and emergency response stakeholders. My contribution focused on the frontend and user experience.",
 
     purpose:
-      "Built to improve emergency preparedness and response by enabling real-time incident reporting, efficient communication between stakeholders, risk assessment, resource coordination, and community engagement during disaster situations.",
+      "The project explores how digital tools can support disaster preparedness and response by making emergency information easier to report, access and communicate.",
 
     technologies: [
       "React Native",
-      "MapBox Map",
-      "REST API",
-      "Geolocation Services",
-      "Real-Time Notifications"
+      "Mapbox",
+      "REST APIs",
+      "Geolocation",
+      "Real-Time Notifications",
     ],
 
-    github:
-      "https://github.com/takohclovert7/resilixApp",
+    github: "https://github.com/takohclovert7/resilixApp",
 
-    demoDoc:
-      "https://your-demo-link.com",
+    demoDoc: null,
+    demoLabel: null,
 
-    image:
-      "../../resilix.png"
+    image: "/resilix.png",
   },
 ];
 
 export default projects;
-
